@@ -1511,7 +1511,7 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { -43, -9, -2.8 }  // BLTouch en Ender 3 típico: X back-left, Y toward back
+#define NOZZLE_TO_PROBE_OFFSET { -43, -9, -1.92 }  // BLTouch en Ender 3 típico: X back-left, Y toward back
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
@@ -2125,8 +2125,8 @@
 #define Z_SAFE_HOMING
 
 #if ENABLED(Z_SAFE_HOMING)
-  #define Z_SAFE_HOMING_X_POINT X_CENTER  // (mm) X point for Z homing
-  #define Z_SAFE_HOMING_Y_POINT Y_CENTER  // (mm) Y point for Z homing
+  #define Z_SAFE_HOMING_X_POINT 125      // (mm) X actualizado para permitir el homing seguro en Ender 3 porque la cama tiene un defecto
+  #define Z_SAFE_HOMING_Y_POINT 100      // (mm) X actualizado para permitir el homing seguro en Ender 3 porque la cama tiene un defecto
 #endif
 
 // Homing speeds (linear=mm/min, rotational=°/min)
